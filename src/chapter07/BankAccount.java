@@ -1,7 +1,7 @@
 package chapter07;
 
 public class BankAccount {
-	private int balance;
+	protected int balance;
 
 	public BankAccount(int balance) {
 		if (balance >= 0) {
@@ -38,5 +38,9 @@ public class BankAccount {
 		} else {
 			return false;
 		}
+	}
+
+	public String toString() {
+		return String.format("현재 잔액: %d", balance);
 	}
 }
